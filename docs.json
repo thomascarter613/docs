@@ -1,0 +1,269 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "luma",
+  "name": "monad-docs",
+  "colors": {
+    "primary": "#ff9038",
+    "light": "#ff9038",
+    "dark": "#ff9038"
+  },
+  "favicon": "/favicon.svg",
+
+  "navigation": {
+    "groups": [
+      {
+        "group": "Founder Log",
+        "pages": ["founder-log/overview"]
+      },
+      {
+        "group": "Daily Logs",
+        "pages": [
+          "founder-log/daily/2026-06-05",
+          "founder-log/daily/template"
+        ]
+      },
+      {
+        "group": "Weekly Reviews",
+        "pages": ["founder-log/weekly/overview"]
+      },
+      {
+        "group": "Monthly Themes",
+        "pages": ["founder-log/monthly/overview"]
+      },
+
+      {
+        "group": "Narrative Engine",
+        "pages": [
+          "narrative/overview",
+          "narrative/founder-narrative"
+        ]
+      },
+      {
+        "group": "Publishing System",
+        "pages": [
+          "narrative/publishing/system",
+          "narrative/publishing/cadence",
+          "narrative/publishing/templates"
+        ]
+      },
+      {
+        "group": "Positioning System",
+        "pages": [
+          "narrative/positioning/system",
+          "narrative/positioning/framework"
+        ]
+      },
+      {
+        "group": "Authority System",
+        "pages": [
+          "narrative/authority/system",
+          "narrative/authority/assets"
+        ]
+      },
+
+      {
+        "group": "Pipeline Engine",
+        "pages": ["pipeline/overview"]
+      },
+      {
+        "group": "Discovery System",
+        "pages": [
+          "pipeline/discovery/system",
+          "pipeline/discovery/questions",
+          "pipeline/discovery/scripts"
+        ]
+      },
+      {
+        "group": "Sales System",
+        "pages": [
+          "pipeline/sales/system",
+          "pipeline/sales/script",
+          "pipeline/sales/pricing"
+        ]
+      },
+      {
+        "group": "Pricing System",
+        "pages": [
+          "pipeline/pricing/models",
+          "pipeline/pricing/framework"
+        ]
+      },
+      {
+        "group": "Pipeline Review System",
+        "pages": [
+          "pipeline/review/system",
+          "pipeline/review/metrics"
+        ]
+      },
+
+      {
+        "group": "Delivery Engine",
+        "pages": ["delivery/overview"]
+      },
+      {
+        "group": "Client Delivery System",
+        "pages": [
+          "delivery/client/system",
+          "delivery/client/workflows"
+        ]
+      },
+      {
+        "group": "Asset Extraction System",
+        "pages": [
+          "delivery/extraction/system",
+          "delivery/extraction/templates"
+        ]
+      },
+      {
+        "group": "Engagement Templates",
+        "pages": [
+          "delivery/engagement/templates",
+          "delivery/engagement/scopes"
+        ]
+      },
+
+      {
+        "group": "Platform Engine",
+        "pages": ["platform/overview"]
+      },
+      {
+        "group": "Module Lineage",
+        "pages": [
+          "platform/lineage/overview",
+          "platform/lineage/map"
+        ]
+      },
+      {
+        "group": "Architecture Decisions",
+        "pages": [
+          "platform/architecture/decisions",
+          "platform/architecture/adr-template"
+        ]
+      },
+      {
+        "group": "Platform Templates",
+        "pages": [
+          "platform/templates/overview",
+          "platform/templates/modules"
+        ]
+      },
+
+      {
+        "group": "Governance",
+        "pages": ["governance/overview"]
+      },
+      {
+        "group": "Decision Filters",
+        "pages": [
+          "governance/decision-filters/overview",
+          "governance/decision-filters/examples"
+        ]
+      },
+      {
+        "group": "Documentation Standards",
+        "pages": [
+          "governance/docs/standards",
+          "governance/docs/templates"
+        ]
+      },
+      {
+        "group": "Operating Rhythm",
+        "pages": [
+          "governance/rhythm/weekly",
+          "governance/rhythm/daily"
+        ]
+      },
+
+      {
+        "group": "Knowledge Graph",
+        "pages": ["knowledge/overview"]
+      },
+      {
+        "group": "Concepts",
+        "pages": [
+          "knowledge/concepts/core",
+          "knowledge/concepts/derived"
+        ]
+      },
+      {
+        "group": "Patterns",
+        "pages": [
+          "knowledge/patterns/overview",
+          "knowledge/patterns/library"
+        ]
+      },
+      {
+        "group": "Lineage",
+        "pages": [
+          "knowledge/lineage/overview",
+          "knowledge/lineage/map"
+        ]
+      }
+    ]
+  },
+
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+
+  "navbar": {
+    "logo": {
+      "light": "/logo/light.svg",
+      "dark": "/logo/dark.svg"
+    },
+    "links": [
+      {
+        "label": "v{{version}}",
+        "href": "/versions"
+      },
+      {
+        "label": "Domains",
+        "href": "/domains"
+      },
+      {
+        "label": "ADRs",
+        "href": "/adr/index"
+      },
+      {
+        "label": "Changelog",
+        "href": "/changelog"
+      },
+      {
+        "label": "Governance",
+        "href": "/governance/overview"
+      },
+      {
+        "label": "GitHub",
+        "type": "github",
+        "href": "https://github.com/your-org/monad"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Search",
+      "href": "/search"
+    }
+  },
+
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
+  },
+
+  "footer": {
+    "socials": {
+      "x": "https://x.com/mintlify",
+      "github": "https://github.com/mintlify",
+      "linkedin": "https://linkedin.com/company/mintlify"
+    }
+  }
+}
