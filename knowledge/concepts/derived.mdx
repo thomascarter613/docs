@@ -1,23 +1,48 @@
 ---
-title: Derived
-version: 0.1.0
-status: draft
-updated: 2026-06-05
+title: Derived Concepts
+description: Concepts that emerge from combinations of core ideas, operating patterns, and platform decisions.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
 
 owner: thomas
-reviewCycle: quarterly
+reviewCycle: monthly
 
-parents: []
+parents:
+  - knowledge/concepts/core
 children: []
 supersedes: []
 supersededBy: []
 
 tags:
-  - documentation
-  - monad
-  - lineage
+  - knowledge-graph
+  - derived-concepts
+  - concepts
 ---
 
-# Derived
+# Derived Concepts
 
-Content coming soon.
+Derived Concepts emerge from the relationship between core concepts.
+
+They are useful but may change more often than Core Concepts.
+
+---
+
+## Derived concept table
+
+| Concept | Derived from | Definition |
+| --- | --- | --- |
+| AI-Native Operating System | AI Cofounder + Governance + Operating Memory | A business system designed so AI can assist execution through structured context, decision lineage, and human verification. |
+| Governed AI Execution | AI Cofounder + Governance | AI-assisted work that is bounded by rules, review, evidence, and human approval. |
+| Consulting-to-Platform Loop | Delivery Engine + Platform Engine | The process of turning client implementation work into reusable platform requirements. |
+| Founder Memory Layer | Founder Log + Knowledge Graph | Structured founder context that can support future reasoning and AI assistance. |
+| Decision Lineage | ADRs + Governance + Knowledge Graph | The traceable history of why decisions were made and how they affect future work. |
+| Reusable Business Asset | Delivery Engine + Asset Extraction | A template, SOP, checklist, script, or requirement created from real work. |
+
+---
+
+## Review rule
+
+Derived Concepts should be reviewed monthly.
+
+If a derived concept becomes central and stable, promote it into Core Concepts.

@@ -1,23 +1,71 @@
 ---
-title: Library
-version: 0.1.0
-status: draft
-updated: 2026-06-05
+title: Pattern Library
+description: Canonical library of recurring patterns discovered across Applied Innovation Corp and Monad-Workspace.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
 
 owner: thomas
-reviewCycle: quarterly
+reviewCycle: monthly
 
-parents: []
+parents:
+  - knowledge/patterns/overview
 children: []
 supersedes: []
 supersededBy: []
 
 tags:
-  - documentation
-  - monad
-  - lineage
+  - knowledge-graph
+  - patterns
+  - library
 ---
 
-# Library
+# Pattern Library
 
-Content coming soon.
+The Pattern Library records recurring patterns discovered through founder work, delivery, sales, platform development, and governance.
+
+---
+
+## Initial patterns
+
+| Pattern | Area | Meaning | Response |
+| --- | --- | --- | --- |
+| AI needs context | AI Cofounder | AI assistance improves when context is structured | Build handoff and memory systems |
+| Automation requires workflow clarity | Delivery | Automating unclear processes creates risk | Map workflows before implementation |
+| Buyer language matters | Pipeline | Prospects care about outcomes more than AI novelty | Lead with operational relief |
+| Founder memory must become infrastructure | Governance | Important context is otherwise lost | Maintain Founder Log and reviews |
+| Consulting should produce product intelligence | Platform | Delivery work can reveal reusable requirements | Use asset extraction after engagements |
+| Decisions need lineage | Architecture | Future work depends on knowing why choices were made | Maintain ADRs and decision records |
+
+---
+
+## Pattern record format
+
+```md
+## Pattern
+
+[Name]
+
+## Area
+
+[Pipeline / Delivery / Platform / Governance / Narrative / Knowledge]
+
+## Evidence
+
+[Where this pattern appeared]
+
+## Meaning
+
+[What it suggests]
+
+## Response
+
+[What should change because of it]
+
+## Status
+
+Observed / Confirmed / Promoted / Deprecated
+
+## Rule of Thumb
+
+A pattern should be based on repeated evidence, not a single impression.

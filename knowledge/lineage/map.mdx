@@ -1,23 +1,56 @@
 ---
-title: Map
-version: 0.1.0
-status: draft
-updated: 2026-06-05
+title: Lineage Map
+description: Map of important sources, systems, decisions, and promoted artifacts across Monad-Workspace.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
 
 owner: thomas
-reviewCycle: quarterly
+reviewCycle: monthly
 
-parents: []
+parents:
+  - knowledge/lineage/overview
 children: []
 supersedes: []
 supersededBy: []
 
 tags:
-  - documentation
-  - monad
-  - lineage
+  - knowledge-graph
+  - lineage-map
+  - traceability
 ---
 
-# Map
+# Lineage Map
 
-Content coming soon.
+The Lineage Map shows how major systems and artifacts connect back to their source.
+
+---
+
+## Initial lineage map
+
+| Source | Produces | Destination | Purpose |
+| --- | --- | --- | --- |
+| Founder Logs | Decisions, assumptions, risks, context | Governance / ADRs / Knowledge Graph | Preserve operating memory |
+| Weekly Reviews | Patterns and priorities | Monthly Themes / Pipeline / Delivery | Convert activity into intelligence |
+| Monthly Themes | Doctrine and strategy | Narrative / Governance / Platform | Convert patterns into direction |
+| Discovery Calls | Buyer pain and objections | Pipeline / Narrative / Offers | Improve sales and positioning |
+| Client Delivery | Templates and requirements | Delivery / Platform | Convert work into reusable assets |
+| ADRs | Architecture decisions | Platform / Knowledge Graph | Preserve technical decision lineage |
+| Asset Extraction | SOPs, templates, product requirements | Delivery / Platform / Governance | Reuse operational learning |
+
+---
+
+## Map review questions
+
+- Are important artifacts traceable?
+- Are there orphaned docs with no source?
+- Are decisions linked to evidence?
+- Are platform modules linked to real problems?
+- Are public claims linked to proof?
+- Are reusable assets linked to delivery or founder work?
+
+---
+
+## Rule of thumb
+
+If an artifact matters, its origin should be visible.

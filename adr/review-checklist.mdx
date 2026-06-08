@@ -1,23 +1,131 @@
 ---
 title: ADR Review Checklist
-version: 0.1.0
-status: active
-updated: 2026-06-05
+description: Checklist for reviewing Architecture Decision Records before acceptance.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
 
 owner: thomas
-reviewCycle: quarterly
+reviewCycle: monthly
 
-parents: []
+parents:
+  - adr/index
+  - adr/process
 children: []
 supersedes: []
 supersededBy: []
 
 tags:
   - adr
-  - index
-  - monad
+  - review
+  - checklist
+  - governance
 ---
 
 # ADR Review Checklist
 
-Provides a checklist for reviewing ADR quality before acceptance.
+Use this checklist before accepting an Architecture Decision Record.
+
+The goal is to make sure every accepted ADR is clear, grounded, useful, and safe to rely on.
+
+---
+
+## Required fields
+
+Confirm the ADR includes:
+
+- title
+- number
+- status
+- date
+- context
+- decision
+- alternatives considered
+- consequences
+- related documents
+- supersession information, if applicable
+
+---
+
+## Context review
+
+Ask:
+
+- Is the problem clearly explained?
+- Is the decision necessary?
+- Is the scope clear?
+- Does the ADR explain why this matters now?
+- Does it identify what would happen if no decision were made?
+
+---
+
+## Decision review
+
+Ask:
+
+- Is the decision written clearly?
+- Is the decision specific enough to guide implementation?
+- Does it avoid vague or overly broad language?
+- Does it define what is included and excluded?
+- Does it create a durable rule or direction?
+
+---
+
+## Alternatives review
+
+Ask:
+
+- Were reasonable alternatives considered?
+- Is the rejected path explained fairly?
+- Are trade-offs visible?
+- Does the ADR avoid pretending the decision has no downside?
+
+---
+
+## Consequences review
+
+Ask:
+
+- Are positive consequences identified?
+- Are negative consequences identified?
+- Are implementation implications clear?
+- Are risks visible?
+- Are future migration or reversal concerns noted?
+
+---
+
+## Governance review
+
+Ask:
+
+- Does this decision affect other docs?
+- Does this decision require a roadmap update?
+- Does this decision affect existing ADRs?
+- Should any previous ADR be superseded?
+- Does this need human verification before acceptance?
+
+---
+
+## AI review
+
+If AI helped draft the ADR, confirm:
+
+- facts were checked
+- claims were verified
+- uncertainty is marked
+- no invented rationale was added
+- the final decision reflects human intent
+
+---
+
+## Acceptance standard
+
+An ADR is ready to accept when:
+
+- the decision is clear
+- the reasoning is explicit
+- alternatives are documented
+- consequences are acknowledged
+- related docs are linked
+- supersession is handled
+- the ADR index can be updated confidently

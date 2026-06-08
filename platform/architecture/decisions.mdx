@@ -1,23 +1,90 @@
 ---
-title: Decisions
-version: 0.1.0
-status: draft
-updated: 2026-06-05
+title: Architecture Decisions
+description: Platform architecture decision overview for Monad-Workspace.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
 
 owner: thomas
-reviewCycle: quarterly
+reviewCycle: monthly
 
-parents: []
-children: []
+parents:
+  - platform/overview
+  - adr/index
+children:
+  - platform/architecture/adr-template
 supersedes: []
 supersededBy: []
 
 tags:
-  - documentation
-  - monad
-  - lineage
+  - platform
+  - architecture
+  - adr
+  - decisions
 ---
 
-# Decisions
+# Architecture Decisions
 
-Content coming soon.
+Architecture Decisions are the technical and structural choices that shape Monad-Workspace.
+
+The canonical list of Architecture Decision Records lives in the ADR Index. This page explains how those decisions relate to the Platform Engine.
+
+---
+
+## Relationship to ADRs
+
+The ADR system records durable decisions.
+
+The Platform Architecture section explains how those decisions affect implementation.
+
+Use:
+
+- `adr/index` for the canonical decision list
+- individual ADR pages for decision rationale
+- this page for platform-level interpretation
+- `platform/lineage/map` for module relationships
+
+---
+
+## Current architectural baseline
+
+The accepted Monad-Workspace architecture baseline includes:
+
+- Rust-first runtime
+- native tool coordination
+- multi-crate Rust workspace
+- latest stable Rust during early development
+- early Tokio adoption
+- canonical `monad.toml` manifest
+- `monad.lock` and `.monad/` operational state
+- multiple graph output formats
+
+---
+
+## Decision categories
+
+| Category | Purpose |
+| --- | --- |
+| Runtime | Language, execution, async, performance, binary strategy |
+| Workspace | Repo shape, crates, modules, manifests, state |
+| Tooling | Native tool coordination, adapters, task execution |
+| Graph | Dependency graph, output formats, rendering |
+| Governance | Policy, verification, decision lineage |
+| AI Context | Memory, handoff, AI-safe context, provenance |
+
+---
+
+## How to use this page
+
+Use this page when asking:
+
+- Which decisions currently shape the platform?
+- Which ADRs affect this module?
+- Does a proposed feature conflict with accepted architecture?
+- Does a new platform direction require a new ADR?
+
+---
+
+## Definition of done
+
+Architecture Decisions are working when platform implementation can be traced back to durable rationale instead of memory or guesswork.

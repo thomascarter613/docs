@@ -1,23 +1,79 @@
 ---
-title: Overview
-version: 0.1.0
-status: draft
-updated: 2026-06-05
+title: Decision Filters Overview
+description: Practical filters for evaluating decisions before they become commitments.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
 
 owner: thomas
-reviewCycle: quarterly
+reviewCycle: monthly
 
-parents: []
-children: []
+parents:
+  - governance/overview
+children:
+  - governance/decision-filters/examples
 supersedes: []
 supersededBy: []
 
 tags:
-  - documentation
-  - monad
-  - lineage
+  - governance
+  - decision-filters
+  - judgment
 ---
 
-# Overview
+# Decision Filters Overview
 
-Content coming soon.
+Decision Filters help Applied Innovation Corp evaluate decisions before they become commitments.
+
+They are lightweight checks that improve judgment.
+
+---
+
+## Purpose
+
+Decision Filters exist to ask:
+
+- Is this aligned with the company thesis?
+- Is there evidence?
+- What assumptions are we making?
+- What risks does this create?
+- Is this reversible?
+- Does this increase or reduce complexity?
+- Does this require human verification?
+- Should this become an ADR or governance record?
+
+---
+
+## Core filters
+
+| Filter | Question |
+| --- | --- |
+| Alignment | Does this support the current strategy? |
+| Evidence | What supports this decision? |
+| Assumption | What must be true? |
+| Risk | What could go wrong? |
+| Reversibility | Can this be undone easily? |
+| Complexity | Does this simplify or complicate the system? |
+| Timing | Why now? |
+| Human verification | Does this require explicit approval? |
+
+---
+
+## When to use filters
+
+Use Decision Filters before:
+
+- changing strategy
+- accepting an ADR
+- changing pricing
+- committing to client scope
+- adding major platform functionality
+- publishing strong claims
+- creating governance rules
+- relying on AI output for important work
+
+---
+
+## Definition of done
+
+A decision has passed review when it is aligned, evidence-aware, risk-aware, and clearly owned.

@@ -1,24 +1,120 @@
 ---
 title: ADR Process
-version: 0.1.0
-status: active
-updated: 2026-06-05
+description: The process for proposing, reviewing, accepting, superseding, and maintaining Architecture Decision Records in Monad-Workspace.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
 
 owner: thomas
-reviewCycle: quarterly
+reviewCycle: monthly
 
-parents: []
-children: []
+parents:
+  - adr/index
+children:
+  - adr/status-model
+  - adr/review-checklist
+  - adr/supersession
 supersedes: []
 supersededBy: []
 
 tags:
   - adr
-  - index
-  - monad
+  - process
+  - architecture
+  - governance
 ---
 
 # ADR Process
 
-This document defines when to create, review, accept, supersede, or reject ADRs.
+The ADR Process defines how Monad-Workspace records important architectural, technical, operational, and governance decisions.
 
+An Architecture Decision Record exists so future work can understand not only what was decided, but why it was decided.
+
+---
+
+## Purpose
+
+The ADR Process exists to make decisions:
+
+- explicit
+- traceable
+- reviewable
+- supersedable
+- understandable to future contributors
+- usable by AI-assisted development workflows
+
+ADRs prevent major decisions from disappearing into chat history, commits, issues, or memory.
+
+---
+
+## When to create an ADR
+
+Create an ADR when a decision affects:
+
+- runtime architecture
+- repo structure
+- CLI behavior
+- manifest design
+- lockfile or state behavior
+- graph model
+- toolchain coordination
+- AI context architecture
+- provenance
+- policy or governance
+- major dependency choices
+- developer experience principles
+- compatibility or migration strategy
+
+Do not create ADRs for minor implementation details unless those details establish a lasting precedent.
+
+---
+
+## ADR lifecycle
+
+| Step | Description |
+| --- | --- |
+| Draft | The ADR is being written. |
+| Proposed | The ADR is ready for review. |
+| Accepted | The decision is active and binding. |
+| Superseded | A later ADR replaced the decision. |
+| Deprecated | The decision is no longer recommended but remains historically useful. |
+| Rejected | The proposal was considered and intentionally not adopted. |
+
+---
+
+## Process
+
+1. **Identify the decision**  
+   Confirm that the issue is significant enough to require a durable record.
+
+2. **Write the ADR**  
+   Use the ADR template. Include context, decision, alternatives, consequences, and related documents.
+
+3. **Review the ADR**  
+   Apply the ADR Review Checklist before acceptance.
+
+4. **Accept or reject**  
+   If accepted, the ADR becomes binding. If rejected, preserve the record and explain why.
+
+5. **Add to index**  
+   Update `adr/index.mdx` immediately.
+
+6. **Link related docs**  
+   Link the ADR to platform docs, governance docs, issues, roadmap items, or implementation notes.
+
+7. **Revisit when needed**  
+   If the decision changes, do not delete the ADR. Supersede it.
+
+---
+
+## Human verification
+
+AI may draft ADRs, summarize context, identify alternatives, and propose consequences.
+
+Human verification is required before an ADR becomes accepted.
+
+---
+
+## Definition of done
+
+The ADR Process is working when every major architectural decision can be traced to a clear, reviewed, and indexed record.

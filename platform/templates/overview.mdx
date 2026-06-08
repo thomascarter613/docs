@@ -1,23 +1,75 @@
 ---
-title: Overview
-version: 0.1.0
-status: draft
-updated: 2026-06-05
+title: Platform Templates Overview
+description: Reusable templates for defining Monad-Workspace modules, systems, and platform requirements.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
 
 owner: thomas
-reviewCycle: quarterly
+reviewCycle: monthly
 
-parents: []
-children: []
+parents:
+  - platform/overview
+children:
+  - platform/templates/modules
 supersedes: []
 supersededBy: []
 
 tags:
-  - documentation
-  - monad
-  - lineage
+  - platform
+  - templates
+  - product
 ---
 
-# Overview
+# Platform Templates Overview
 
-Content coming soon.
+Platform Templates provide reusable structures for defining Monad-Workspace modules, systems, requirements, and implementation ideas.
+
+They help keep platform planning consistent and traceable.
+
+---
+
+## Purpose
+
+Platform Templates exist to:
+
+- standardize module definitions
+- connect requirements to evidence
+- reduce vague product planning
+- support ADR creation
+- improve implementation readiness
+- preserve reasoning
+
+---
+
+## Template types
+
+| Template | Purpose |
+| --- | --- |
+| Module Template | Define a platform module |
+| Requirement Template | Define a feature or capability |
+| Integration Template | Define native tool integration |
+| Policy Template | Define governance behavior |
+| AI Context Template | Define context behavior for AI-assisted work |
+
+---
+
+## Template rule
+
+Every platform template should include:
+
+- purpose
+- source
+- problem
+- users
+- requirements
+- dependencies
+- risks
+- related ADRs
+- status
+
+---
+
+## Definition of done
+
+Platform Templates are working when platform ideas become structured enough to evaluate, implement, or reject.

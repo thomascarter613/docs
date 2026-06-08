@@ -1,23 +1,126 @@
 ---
 title: ADR Supersession Guide
-version: 0.1.0
-status: active
-updated: 2026-06-05
+description: Guide for replacing Architecture Decision Records without deleting architectural history.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
 
 owner: thomas
-reviewCycle: quarterly
+reviewCycle: monthly
 
-parents: []
+parents:
+  - adr/index
+  - adr/process
 children: []
 supersedes: []
 supersededBy: []
 
 tags:
   - adr
-  - index
-  - monad
+  - supersession
+  - governance
+  - lineage
 ---
 
 # ADR Supersession Guide
 
-Explains how to replace old decisions without deleting history. |
+The ADR Supersession Guide explains how to replace an older decision without deleting architectural history.
+
+Supersession is how Monad-Workspace changes direction while preserving decision lineage.
+
+---
+
+## Core rule
+
+Do not delete old ADRs because the project changed.
+
+Instead, mark the old ADR as superseded and create a new ADR explaining the replacement decision.
+
+---
+
+## When to supersede an ADR
+
+Supersede an ADR when:
+
+- a newer decision replaces an older one
+- implementation experience proves the old decision insufficient
+- project goals change
+- constraints change
+- a better architecture is selected
+- the old decision now creates avoidable risk
+- the old decision no longer fits the product direction
+
+---
+
+## When not to supersede
+
+Do not supersede an ADR merely because:
+
+- wording could be improved
+- minor implementation details changed
+- the decision still holds but needs clarification
+- a related decision was added
+- the ADR needs a small maintenance update
+
+In those cases, update related docs or create a follow-up ADR if needed.
+
+---
+
+## Supersession process
+
+1. Create a new ADR.
+2. Explain why the previous decision is no longer sufficient.
+3. Identify the old ADR in `supersedes`.
+4. Update the old ADR status to `superseded`.
+5. Add the new ADR to `supersededBy` in the old ADR.
+6. Update the ADR index.
+7. Update related implementation and governance docs.
+
+---
+
+## Supersession frontmatter
+
+Old ADR:
+
+```yaml
+status: superseded
+supersededBy:
+  - adr/0009-new-decision
+```
+
+New ADR:
+
+```yaml
+status: accepted
+supersedes:
+  - adr/0003-old-decision
+supersededBy: []
+```
+
+---
+
+## Supersession note
+
+Add a visible note near the top of the old ADR:
+
+> This ADR has been superseded by ADR-0009. It remains available for historical context.
+
+---
+
+## Supersession checklist
+
+Before superseding an ADR, confirm:
+
+- the replacement decision is clear
+- the reason for replacement is documented
+- the old ADR remains accessible
+- both ADRs link to each other
+- the index is updated
+- related docs are updated
+- implementation work knows which decision is active
+
+---
+
+## Definition of done
+
+Supersession is complete when readers can clearly see the old decision, the new decision, and why the change happened.

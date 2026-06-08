@@ -1,23 +1,58 @@
 ---
-title: Map
-version: 0.1.0
-status: draft
-updated: 2026-06-05
+title: Module Lineage Map
+description: Map of Monad-Workspace modules, sources, decisions, and dependencies.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
 
 owner: thomas
-reviewCycle: quarterly
+reviewCycle: monthly
 
-parents: []
+parents:
+  - platform/lineage/overview
 children: []
 supersedes: []
 supersededBy: []
 
 tags:
-  - documentation
-  - monad
-  - lineage
+  - platform
+  - lineage-map
+  - modules
 ---
 
-# Map
+# Module Lineage Map
 
-Content coming soon.
+The Module Lineage Map connects Monad-Workspace modules to their sources, decisions, and dependencies.
+
+---
+
+## Initial lineage map
+
+| Module | Source | Problem | Related ADR | Status |
+| --- | --- | --- | --- | --- |
+| CLI Runtime | Monad runtime vision | Need one coherent command surface | ADR-0001 | Active |
+| Workspace Manifest | Configuration design | Need canonical project intent | ADR-0006 | Active |
+| Lockfile | Reproducibility | Need resolved state separate from intent | ADR-0007 | Active |
+| `.monad/` State | Operational state | Need local cache, reports, provenance, and indexes | ADR-0007 | Active |
+| Graph System | Dependency and project visualization | Need multiple graph outputs | ADR-0008 | Active |
+| Native Tool Coordinator | Polyglot execution | Need to coordinate native tools without replacing them | ADR-0002 | Active |
+| AI Context System | AI Cofounder and repo memory | Need grounded context for AI-assisted work | Proposed | Proposed |
+| Policy System | Governance | Need policy-aware verification | Proposed | Proposed |
+| Provenance System | Trust and traceability | Need record of generated and transformed artifacts | Proposed | Proposed |
+
+---
+
+## Map review questions
+
+- Does every module have a source?
+- Does every active module solve a real problem?
+- Is there an ADR for major architectural choices?
+- Are proposed modules backed by evidence?
+- Are any modules redundant?
+- Are any dependencies unclear?
+
+---
+
+## Rule of thumb
+
+A module without lineage is an idea, not yet a justified platform component.

@@ -1,23 +1,82 @@
 ---
-title: Examples
-version: 0.1.0
-status: draft
-updated: 2026-06-05
+title: Decision Filter Examples
+description: Examples of applying decision filters to strategy, sales, platform, and governance decisions.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
 
 owner: thomas
-reviewCycle: quarterly
+reviewCycle: monthly
 
-parents: []
+parents:
+  - governance/decision-filters/overview
 children: []
 supersedes: []
 supersededBy: []
 
 tags:
-  - documentation
-  - monad
-  - lineage
+  - governance
+  - decision-filters
+  - examples
 ---
 
-# Examples
+# Decision Filter Examples
 
-Content coming soon.
+These examples show how to apply Decision Filters.
+
+---
+
+## Example: Add a platform module
+
+Decision:
+
+> Add an AI Context System module to Monad-Workspace.
+
+| Filter | Answer |
+| --- | --- |
+| Alignment | Supports AI-ready workspace goal |
+| Evidence | Founder Log and AI Cofounder workflows require context continuity |
+| Assumption | Structured context will improve AI output quality |
+| Risk | Could become too complex too early |
+| Reversibility | Medium; architecture choices may persist |
+| Complexity | Adds complexity but may reduce future context drift |
+| Timing | Useful once core manifest and state systems exist |
+| Human verification | Required before architecture commitment |
+
+---
+
+## Example: Publish a founder essay
+
+Decision:
+
+> Publish an essay about AI-native operating systems.
+
+| Filter | Answer |
+| --- | --- |
+| Alignment | Supports Narrative Engine and authority building |
+| Evidence | Founder Narrative and Monthly Themes |
+| Assumption | Audience will understand AI operating system framing |
+| Risk | Claims may sound too broad if unsupported |
+| Reversibility | High; content can be edited |
+| Complexity | Low |
+| Timing | Useful for positioning |
+| Human verification | Required before publishing |
+
+---
+
+## Example: Accept client scope
+
+Decision:
+
+> Accept a client automation project.
+
+| Filter | Answer |
+| --- | --- |
+| Alignment | Supports consulting-plus-platform model |
+| Evidence | Discovery identified workflow pain |
+| Assumption | Client will provide access and timely feedback |
+| Risk | Scope creep, unclear data access, unrealistic expectations |
+| Reversibility | Low after kickoff |
+| Complexity | Medium |
+| Timing | Depends on urgency and capacity |
+| Human verification | Required before commitment |

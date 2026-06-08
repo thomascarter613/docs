@@ -1,23 +1,77 @@
 ---
-title: Overview
-version: 0.1.0
-status: draft
-updated: 2026-06-05
+title: Module Lineage Overview
+description: The system for tracing platform modules back to their source, purpose, evidence, and related decisions.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
 
 owner: thomas
-reviewCycle: quarterly
+reviewCycle: monthly
 
-parents: []
-children: []
+parents:
+  - platform/overview
+children:
+  - platform/lineage/map
 supersedes: []
 supersededBy: []
 
 tags:
-  - documentation
-  - monad
-  - lineage
+  - platform
+  - module-lineage
+  - architecture
+  - traceability
 ---
 
-# Overview
+# Module Lineage Overview
 
-Content coming soon.
+Module Lineage records where platform modules come from, why they exist, and what evidence supports them.
+
+It prevents Monad-Workspace from becoming a collection of disconnected ideas.
+
+---
+
+## Purpose
+
+Module Lineage exists to connect each module to:
+
+- source problem
+- founder need
+- client need
+- platform requirement
+- ADR
+- implementation status
+- related systems
+- future roadmap
+
+---
+
+## Lineage questions
+
+For every module, ask:
+
+- Why does this module exist?
+- What problem does it solve?
+- Where did the need appear?
+- What decision supports it?
+- What depends on it?
+- What would happen if it did not exist?
+
+---
+
+## Module record format
+
+| Field | Description |
+| --- | --- |
+| Module | Name of the module |
+| Source | Where the idea came from |
+| Problem | What problem it solves |
+| Evidence | Why it matters |
+| Related ADR | Decision record |
+| Status | Proposed, active, deferred, deprecated |
+| Dependencies | Related modules or systems |
+
+---
+
+## Definition of done
+
+Module Lineage is working when every major module has a traceable reason to exist.

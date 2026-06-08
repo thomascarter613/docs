@@ -1,23 +1,75 @@
 ---
-title: Metrics
-version: 0.1.0
-status: draft
-updated: 2026-06-05
+title: Pipeline Metrics
+description: Metrics for reviewing pipeline health, sales learning, and revenue progress.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
 
 owner: thomas
-reviewCycle: quarterly
+reviewCycle: weekly
 
-parents: []
+parents:
+  - pipeline/review/system
 children: []
 supersedes: []
 supersededBy: []
 
 tags:
-  - documentation
-  - monad
-  - lineage
+  - pipeline
+  - metrics
+  - sales
+  - review
 ---
 
-# Metrics
+# Pipeline Metrics
 
-Content coming soon.
+Pipeline Metrics track the health and learning rate of the Pipeline Engine.
+
+Metrics should support better judgment, not vanity reporting.
+
+---
+
+## Core metrics
+
+| Metric | Purpose |
+| --- | --- |
+| New leads | Measures new pipeline creation |
+| Discovery calls booked | Measures interest and conversion from outreach or inbound |
+| Discovery calls completed | Measures actual conversation volume |
+| Qualified opportunities | Measures fit and buying potential |
+| Proposals sent | Measures sales progression |
+| Closed won | Measures revenue conversion |
+| Closed lost | Measures rejected or failed opportunities |
+| Follow-ups overdue | Measures pipeline discipline |
+
+---
+
+## Learning metrics
+
+| Metric | Purpose |
+| --- | --- |
+| Repeated objections | Reveals positioning or offer friction |
+| Common pain themes | Reveals market demand |
+| Pricing objections | Reveals value or budget mismatch |
+| Discovery-to-proposal conversion | Reveals qualification strength |
+| Proposal-to-close conversion | Reveals offer and trust strength |
+
+---
+
+## Review questions
+
+Ask weekly:
+
+- What stage has the most friction?
+- What objections repeated?
+- What buyer language should be reused?
+- What offer confusion appeared?
+- What follow-ups are overdue?
+- What should change in discovery?
+- What should change in positioning?
+
+---
+
+## Rule of thumb
+
+The best pipeline metric is the one that changes next week’s behavior.

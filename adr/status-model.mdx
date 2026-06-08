@@ -1,29 +1,113 @@
 ---
-title: ADR Status-Model
-version: 0.1.0
-status: active
-updated: 2026-06-05
+title: ADR Status Model
+description: Canonical status model for Architecture Decision Records in Monad-Workspace.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
 
 owner: thomas
-reviewCycle: quarterly
+reviewCycle: monthly
 
-parents: []
+parents:
+  - adr/index
+  - adr/process
 children: []
 supersedes: []
 supersededBy: []
 
 tags:
   - adr
-  - index
-  - monad
+  - status
+  - governance
 ---
 
-# ADR Status-Model
+# ADR Status Model
 
-This document documents statuses: 
-* Draft
-* Proposed
-* Accepted
-* Superseded
-* Deprecated
-* Rejected
+The ADR Status Model defines the lifecycle states for Architecture Decision Records in Monad-Workspace.
+
+Every ADR must have a clear status.
+
+---
+
+## Status table
+
+| Status | Meaning | Binding? |
+| --- | --- | --- |
+| Draft | The ADR is being written and is not ready for review. | No |
+| Proposed | The ADR is ready for review but not yet accepted. | No |
+| Accepted | The ADR is active and should guide implementation. | Yes |
+| Superseded | A newer ADR has replaced this decision. | No |
+| Deprecated | The decision remains historically relevant but should not guide new work. | No |
+| Rejected | The proposal was reviewed and intentionally not adopted. | No |
+
+---
+
+## Draft
+
+Use `draft` when the ADR is incomplete.
+
+Draft ADRs may contain unresolved questions, incomplete alternatives, or rough implementation notes.
+
+Draft ADRs should not guide implementation.
+
+---
+
+## Proposed
+
+Use `proposed` when the ADR is complete enough for review.
+
+A proposed ADR should include context, decision, alternatives, consequences, and review questions.
+
+---
+
+## Accepted
+
+Use `accepted` when the decision is active.
+
+Accepted ADRs are binding until superseded, deprecated, or replaced by a later decision.
+
+---
+
+## Superseded
+
+Use `superseded` when a newer ADR replaces the old decision.
+
+A superseded ADR should link to the replacing ADR.
+
+Do not delete superseded ADRs.
+
+---
+
+## Deprecated
+
+Use `deprecated` when a decision is no longer recommended but has not been directly replaced by a specific newer ADR.
+
+Deprecated ADRs remain useful for historical understanding.
+
+---
+
+## Rejected
+
+Use `rejected` when a proposal was considered and intentionally not adopted.
+
+Rejected ADRs should preserve useful reasoning so the same option is not repeatedly reconsidered without new evidence.
+
+---
+
+## Status transition rules
+
+| From | To | Rule |
+| --- | --- | --- |
+| Draft | Proposed | ADR is complete enough for review |
+| Proposed | Accepted | Decision is approved |
+| Proposed | Rejected | Decision is declined |
+| Accepted | Superseded | A later ADR replaces it |
+| Accepted | Deprecated | Decision should no longer guide new work |
+| Deprecated | Superseded | A newer ADR provides a replacement |
+| Rejected | Proposed | Only if new evidence justifies reconsideration |
+
+---
+
+## Definition of done
+
+The ADR Status Model is working when readers can immediately tell whether a decision is active, historical, rejected, or replaced.

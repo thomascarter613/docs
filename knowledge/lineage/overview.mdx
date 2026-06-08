@@ -1,23 +1,79 @@
 ---
-title: Overview
-version: 0.1.0
-status: draft
-updated: 2026-06-05
+title: Lineage Overview
+description: The system for tracing ideas, decisions, assets, modules, and knowledge back to their source.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
 
 owner: thomas
-reviewCycle: quarterly
+reviewCycle: monthly
 
-parents: []
-children: []
+parents:
+  - knowledge/overview
+children:
+  - knowledge/lineage/map
 supersedes: []
 supersededBy: []
 
 tags:
-  - documentation
-  - monad
+  - knowledge-graph
   - lineage
+  - traceability
 ---
 
-# Overview
+# Lineage Overview
 
-Content coming soon.
+Lineage traces ideas, decisions, assets, modules, and knowledge back to their source.
+
+It answers the question:
+
+> Where did this come from, and why does it exist?
+
+---
+
+## Purpose
+
+Lineage exists to:
+
+- preserve origin context
+- support trust
+- prevent orphaned ideas
+- connect decisions to evidence
+- connect assets to real work
+- support AI-assisted reasoning
+- make change safer
+
+---
+
+## What needs lineage
+
+Track lineage for:
+
+- ADRs
+- platform modules
+- governance rules
+- reusable assets
+- major templates
+- derived concepts
+- patterns
+- public claims
+- product requirements
+
+---
+
+## Lineage fields
+
+| Field | Meaning |
+| --- | --- |
+| Source | Where the item came from |
+| Reason | Why it exists |
+| Evidence | What supports it |
+| Destination | Where it lives now |
+| Related decisions | ADRs or governance records |
+| Status | Current lifecycle state |
+
+---
+
+## Definition of done
+
+Lineage is working when important artifacts can be traced back to their origin without relying on memory.
