@@ -9,117 +9,326 @@
   },
   "favicon": "/favicon.svg",
 
+  "seo": {
+    "metatags": {
+      "canonical": "https://docs.monad-workspace.com",
+      "og:site_name": "Monad-Workspace Docs",
+      "og:type": "website",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@monad_workspace",
+      "keywords": "Monad-Workspace, Applied Innovation Corp, AI Cofounder, Founder Log, ADR, AI-native operating system, governance, documentation, pipeline, delivery, platform, knowledge graph"
+    }
+  },
+
   "navigation": {
+    "directory": "card",
     "groups": [
       {
-        "group": "Start Here",
+        "group": "Start here",
+        "boost": 2,
         "pages": [
           "quickstart",
-          "founder-log/overview",
-          "adr/index",
-          "governance/overview"
+          "search",
+          "versions",
+          "domains",
+          "changelog"
         ]
       },
       {
-        "group": "Founder Operating System",
+        "group": "Founder operating system",
+        "root": "founder-log/overview",
+        "boost": 1.5,
         "pages": [
-          "founder-log/daily/overview",
-          "founder-log/daily/template",
-          "founder-log/daily/2026-06-05",
-          "founder-log/weekly/overview",
-          "founder-log/weekly/template",
-          "founder-log/monthly/overview",
-          "founder-log/monthly/template",
-          "founder-log/ai-cofounder/handoff",
-          "founder-log/standards/logging-standard",
-          "founder-log/extraction/decisions",
-          "founder-log/extraction/assumptions",
-          "founder-log/extraction/risks",
-          "founder-log/governance/redaction",
-          "founder-log/workflows/promotion"
+          {
+            "group": "Daily logs",
+            "root": "founder-log/daily/overview",
+            "expanded": false,
+            "pages": [
+              "founder-log/daily/template",
+              "founder-log/daily/2026-06-05"
+            ]
+          },
+          {
+            "group": "Weekly reviews",
+            "root": "founder-log/weekly/overview",
+            "expanded": false,
+            "pages": [
+              "founder-log/weekly/template"
+            ]
+          },
+          {
+            "group": "Monthly themes",
+            "root": "founder-log/monthly/overview",
+            "expanded": false,
+            "pages": [
+              "founder-log/monthly/template"
+            ]
+          },
+          {
+            "group": "AI Cofounder",
+            "expanded": false,
+            "pages": [
+              "founder-log/ai-cofounder/handoff"
+            ]
+          },
+          {
+            "group": "Standards",
+            "expanded": false,
+            "pages": [
+              "founder-log/standards/logging-standard",
+              "founder-log/governance/redaction",
+              "founder-log/workflows/promotion"
+            ]
+          },
+          {
+            "group": "Extraction",
+            "expanded": false,
+            "pages": [
+              "founder-log/extraction/decisions",
+              "founder-log/extraction/assumptions",
+              "founder-log/extraction/risks"
+            ]
+          }
         ]
       },
       {
-        "group": "Architecture & ADRs",
+        "group": "Architecture and ADRs",
+        "root": "adr/index",
+        "boost": 1.5,
         "pages": [
-          "adr/index",
-          "adr/process",
-          "adr/status-model",
-          "adr/supersession",
-          "adr/review-checklist",
-          "platform/architecture/decisions",
-          "platform/architecture/adr-template"
+          {
+            "group": "ADR system",
+            "expanded": false,
+            "pages": [
+              "adr/process",
+              "adr/status-model",
+              "adr/supersession",
+              "adr/review-checklist"
+            ]
+          },
+          {
+            "group": "Platform architecture",
+            "expanded": false,
+            "pages": [
+              "platform/architecture/decisions",
+              "platform/architecture/adr-template"
+            ]
+          }
         ]
       },
       {
-        "group": "Narrative & Authority",
+        "group": "Narrative and authority",
+        "root": "narrative/overview",
         "pages": [
-          "narrative/overview",
           "narrative/founder-narrative",
-          "narrative/publishing/system",
-          "narrative/publishing/cadence",
-          "narrative/publishing/templates",
-          "narrative/positioning/system",
-          "narrative/positioning/framework",
-          "narrative/authority/system",
-          "narrative/authority/assets"
+          {
+            "group": "Publishing",
+            "root": "narrative/publishing/system",
+            "expanded": false,
+            "pages": [
+              "narrative/publishing/cadence",
+              "narrative/publishing/templates"
+            ]
+          },
+          {
+            "group": "Positioning",
+            "root": "narrative/positioning/system",
+            "expanded": false,
+            "pages": [
+              "narrative/positioning/framework"
+            ]
+          },
+          {
+            "group": "Authority",
+            "root": "narrative/authority/system",
+            "expanded": false,
+            "pages": [
+              "narrative/authority/assets"
+            ]
+          }
         ]
       },
       {
-        "group": "Pipeline & Revenue",
+        "group": "Pipeline and revenue",
+        "root": "pipeline/overview",
+        "boost": 1.5,
         "pages": [
-          "pipeline/overview",
-          "pipeline/discovery/system",
-          "pipeline/discovery/questions",
-          "pipeline/discovery/scripts",
-          "pipeline/sales/system",
-          "pipeline/sales/script",
-          "pipeline/sales/pricing",
-          "pipeline/pricing/framework",
-          "pipeline/pricing/models",
-          "pipeline/review/system",
-          "pipeline/review/metrics"
+          {
+            "group": "Discovery",
+            "root": "pipeline/discovery/system",
+            "expanded": false,
+            "pages": [
+              "pipeline/discovery/questions",
+              "pipeline/discovery/scripts"
+            ]
+          },
+          {
+            "group": "Sales",
+            "root": "pipeline/sales/system",
+            "expanded": false,
+            "pages": [
+              "pipeline/sales/script",
+              "pipeline/sales/pricing"
+            ]
+          },
+          {
+            "group": "Pricing",
+            "root": "pipeline/pricing/framework",
+            "expanded": false,
+            "pages": [
+              "pipeline/pricing/models"
+            ]
+          },
+          {
+            "group": "Review",
+            "root": "pipeline/review/system",
+            "expanded": false,
+            "pages": [
+              "pipeline/review/metrics"
+            ]
+          }
         ]
       },
       {
         "group": "Delivery",
+        "root": "delivery/overview",
+        "boost": 1.5,
         "pages": [
-          "delivery/overview",
-          "delivery/client/system",
-          "delivery/client/workflows",
-          "delivery/extraction/system",
-          "delivery/extraction/templates",
-          "delivery/engagement/templates",
-          "delivery/engagement/scopes"
+          {
+            "group": "Client delivery",
+            "root": "delivery/client/system",
+            "expanded": false,
+            "pages": [
+              "delivery/client/workflows"
+            ]
+          },
+          {
+            "group": "Asset extraction",
+            "root": "delivery/extraction/system",
+            "expanded": false,
+            "pages": [
+              "delivery/extraction/templates"
+            ]
+          },
+          {
+            "group": "Engagements",
+            "root": "delivery/engagement/templates",
+            "expanded": false,
+            "pages": [
+              "delivery/engagement/scopes"
+            ]
+          }
         ]
       },
       {
         "group": "Platform",
+        "root": "platform/overview",
+        "boost": 1.5,
         "pages": [
-          "platform/overview",
-          "platform/lineage/overview",
-          "platform/lineage/map",
-          "platform/templates/overview",
-          "platform/templates/modules"
+          {
+            "group": "Module lineage",
+            "root": "platform/lineage/overview",
+            "expanded": false,
+            "pages": [
+              "platform/lineage/map"
+            ]
+          },
+          {
+            "group": "Templates",
+            "root": "platform/templates/overview",
+            "expanded": false,
+            "pages": [
+              "platform/templates/modules"
+            ]
+          }
         ]
       },
       {
-        "group": "Governance & Knowledge",
+        "group": "Governance",
+        "root": "governance/overview",
+        "boost": 1.5,
         "pages": [
-          "governance/overview",
-          "governance/decision-filters/overview",
-          "governance/decision-filters/examples",
-          "governance/docs/standards",
-          "governance/docs/templates",
-          "governance/rhythm/weekly",
-          "governance/rhythm/daily",
-          "knowledge/overview",
-          "knowledge/concepts/core",
-          "knowledge/concepts/derived",
-          "knowledge/patterns/overview",
-          "knowledge/patterns/library",
-          "knowledge/lineage/overview",
-          "knowledge/lineage/map"
+          {
+            "group": "Decision filters",
+            "root": "governance/decision-filters/overview",
+            "expanded": false,
+            "pages": [
+              "governance/decision-filters/examples"
+            ]
+          },
+          {
+            "group": "Documentation operations",
+            "root": "governance/docs/standards",
+            "expanded": false,
+            "pages": [
+              "governance/docs/templates",
+              "governance/docs/review-process",
+              "governance/docs/publishing-checklist",
+              "governance/docs/seo-checklist",
+              "governance/docs/search-tuning",
+              "governance/docs/analytics-review",
+              "governance/docs/feedback-review",
+              "governance/docs/maintenance-checklist"
+            ]
+          },
+          {
+            "group": "Operating rhythm",
+            "expanded": false,
+            "pages": [
+              "governance/rhythm/daily",
+              "governance/rhythm/weekly"
+            ]
+          },
+          {
+            "group": "AI governance",
+            "expanded": false,
+            "pages": [
+              "governance/human-verification/standard",
+              "governance/ai/promotion-rules",
+              "governance/public-claims/standard",
+              "governance/client-safety/documentation"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Knowledge graph",
+        "root": "knowledge/overview",
+        "boost": 1.5,
+        "pages": [
+          {
+            "group": "Concepts",
+            "root": "knowledge/concepts/core",
+            "expanded": false,
+            "pages": [
+              "knowledge/concepts/derived"
+            ]
+          },
+          {
+            "group": "Patterns",
+            "root": "knowledge/patterns/overview",
+            "expanded": false,
+            "pages": [
+              "knowledge/patterns/library"
+            ]
+          },
+          {
+            "group": "Lineage",
+            "root": "knowledge/lineage/overview",
+            "expanded": false,
+            "pages": [
+              "knowledge/lineage/map"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Reference",
+        "pages": [
+          "versions",
+          "domains",
+          "changelog",
+          "search"
         ]
       }
     ]
@@ -141,8 +350,16 @@
         "href": "/quickstart"
       },
       {
+        "label": "Domains",
+        "href": "/domains"
+      },
+      {
         "label": "ADRs",
         "href": "/adr/index"
+      },
+      {
+        "label": "Changelog",
+        "href": "/changelog"
       },
       {
         "label": "Governance",

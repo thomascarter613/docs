@@ -1,0 +1,130 @@
+---
+title: Documentation review process
+description: The monthly and event-driven process for reviewing, updating, and governing Monad-Workspace documentation.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
+boost: 1.5
+
+owner: thomas
+reviewCycle: monthly
+
+parents:
+  - governance/docs/standards
+children:
+  - governance/docs/maintenance-checklist
+  - governance/docs/analytics-review
+  - governance/docs/feedback-review
+supersedes: []
+supersededBy: []
+
+tags:
+  - governance
+  - documentation
+  - review
+  - maintenance
+---
+
+# Documentation review process
+
+The Documentation Review Process defines how Monad-Workspace docs stay accurate, useful, safe, and aligned with current operating doctrine.
+
+Docs are operating infrastructure. They need review like code, tasks, decisions, and client work.
+
+---
+
+## Purpose
+
+This process exists to:
+
+- keep docs current
+- prevent stale doctrine
+- preserve decision lineage
+- improve search quality
+- reduce duplicate pages
+- identify documentation gaps
+- review AI-generated changes
+- keep public claims accurate
+- maintain trust in the docs
+
+---
+
+## Review types
+
+| Review type | Cadence | Purpose |
+| --- | --- | --- |
+| Daily light review | As needed | Capture quick fixes and obvious gaps |
+| Weekly review | Weekly | Promote Founder Log or delivery lessons into docs |
+| Monthly review | Monthly | Review structure, status, search, analytics, and stale pages |
+| Event-driven review | As needed | Review docs after ADRs, releases, pricing changes, client lessons, or governance changes |
+
+---
+
+## Monthly review process
+
+1. Review the changelog.
+2. Review recently changed pages.
+3. Check pages marked `draft`, `active`, or `proposed`.
+4. Review stale `updated` dates.
+5. Review analytics and search terms.
+6. Review feedback.
+7. Check for duplicate or overlapping pages.
+8. Check broken links locally.
+9. Update page statuses.
+10. Update `versions.mdx` if a section reaches a new baseline.
+11. Update `changelog.mdx`.
+
+---
+
+## Event-driven review triggers
+
+Review docs immediately when:
+
+- an ADR is accepted
+- an ADR is superseded
+- pricing changes
+- positioning changes
+- a new offer is created
+- a client delivery lesson changes process
+- a governance rule changes
+- a public claim changes
+- a major navigation change happens
+- an AI assistant produces content that may become canonical
+
+---
+
+## Review checklist
+
+A page passes review when:
+
+- the title is clear
+- the description is accurate
+- the status is correct
+- the `updated` date is current
+- links still work
+- claims are still true
+- sensitive content is absent
+- related pages are linked
+- the page has a definition of done
+- the page still belongs where it is
+
+---
+
+## Human verification
+
+Human review is required before accepting changes to:
+
+- ADRs
+- governance rules
+- pricing
+- public claims
+- client-facing language
+- navigation structure
+- canonical templates
+- AI Cofounder instructions
+
+---
+
+## Definition of done
+
+The Documentation Review Process is working when the docs remain current enough to guide real work without requiring the founder to reconstruct context from memory.

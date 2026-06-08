@@ -1,0 +1,148 @@
+---
+title: Versions
+description: Version history, release stages, and documentation versioning policy for Monad-Workspace.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
+
+owner: thomas
+reviewCycle: monthly
+
+parents: []
+children: []
+supersedes: []
+supersededBy: []
+
+tags:
+  - versions
+  - releases
+  - documentation
+  - governance
+---
+
+# Versions
+
+This page tracks the version history and versioning policy for Monad-Workspace documentation.
+
+Versions help distinguish between current operating doctrine, draft systems, historical decisions, and future planned changes.
+
+---
+
+## Current version
+
+| Area | Current version | Status |
+| --- | --- | --- |
+| Documentation system | `1.0.0` | Stable baseline |
+| Founder Log | `1.0.0` | Stable |
+| ADR system | `1.0.0` | Stable |
+| Narrative Engine | `1.0.0` | Stable |
+| Pipeline Engine | `1.0.0` | Stable |
+| Delivery Engine | `1.0.0` | Stable |
+| Platform Engine | `1.0.0` | Stable |
+| Governance system | `1.0.0` | Stable |
+| Knowledge Graph | `1.0.0` | Stable |
+
+---
+
+## Version meaning
+
+Monad-Workspace docs use semantic versioning for documentation maturity.
+
+| Version type | Meaning |
+| --- | --- |
+| Major | Structural change, new operating model, or breaking documentation change |
+| Minor | New pages, systems, templates, or workflows added |
+| Patch | Clarifications, corrections, wording improvements, or small updates |
+
+Example:
+
+```txt
+1.0.0
+1.1.0
+1.1.1
+2.0.0
+```
+
+---
+
+## Status values
+
+Pages should use one of these statuses.
+
+| Status | Meaning |
+| --- | --- |
+| Draft | The page is incomplete or exploratory |
+| Proposed | The page is ready for review but not yet canonical |
+| Active | The page is usable but still changing |
+| Stable | The page is canonical for current use |
+| Deprecated | The page should no longer guide new work |
+| Superseded | A newer page has replaced it |
+
+---
+
+## Version policy
+
+Use these rules when updating pages:
+
+1. Keep `version` in frontmatter.
+2. Update `updated` whenever meaningful content changes.
+3. Use `status: stable` only when the page is ready to guide real work.
+4. Use `supersedes` and `supersededBy` when replacing pages.
+5. Do not delete historical decision context.
+6. Record meaningful changes in the changelog.
+7. Update this page when major sections reach a new baseline.
+
+---
+
+## Initial stable baseline
+
+The first stable documentation baseline includes:
+
+- Founder Log system
+- Daily, weekly, and monthly review cadence
+- ADR index and governance pages
+- Narrative Engine
+- Publishing System
+- Positioning System
+- Authority System
+- Pipeline Engine
+- Discovery System
+- Sales System
+- Pricing System
+- Pipeline Review System
+- Delivery Engine
+- Client Delivery System
+- Asset Extraction System
+- Engagement Templates
+- Platform Engine
+- Module Lineage
+- Platform Templates
+- Governance
+- Decision Filters
+- Documentation Standards
+- Operating Rhythm
+- Knowledge Graph
+- Concepts
+- Patterns
+- Lineage
+
+---
+
+## Review cadence
+
+Review versions monthly.
+
+During review:
+
+- confirm current page statuses
+- identify stale pages
+- update version numbers where needed
+- record important changes in the changelog
+- mark superseded pages clearly
+- confirm canonical pages still reflect current doctrine
+
+---
+
+## Definition of done
+
+The version system is working when readers can tell which docs are current, which docs are historical, and which docs are still under review.

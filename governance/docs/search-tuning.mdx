@@ -1,0 +1,110 @@
+---
+title: Search tuning
+description: Standards for improving Mintlify search relevance across Monad-Workspace docs.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
+
+owner: thomas
+reviewCycle: monthly
+
+parents:
+  - governance/docs/seo-checklist
+children: []
+supersedes: []
+supersededBy: []
+
+tags:
+  - governance
+  - search
+  - documentation
+  - mintlify
+---
+
+# Search tuning
+
+Search tuning improves how readers find the right page in Monad-Workspace docs.
+
+Mintlify already provides built-in search. This page defines how to make that search more useful.
+
+---
+
+## Purpose
+
+Search tuning exists to:
+
+- improve internal search relevance
+- reduce duplicate results
+- make canonical pages easier to find
+- help AI systems retrieve the right context
+- identify missing docs through search behavior
+
+---
+
+## Search quality inputs
+
+Search quality depends on:
+
+- clear titles
+- specific descriptions
+- consistent terminology
+- useful headings
+- accurate tags
+- internal links
+- page structure
+- appropriate search boosts
+
+---
+
+## Canonical search terms
+
+Use these terms consistently:
+
+| Concept | Canonical term |
+| --- | --- |
+| Founder operating memory | Founder Log |
+| AI operating partner | AI Cofounder |
+| Architecture decisions | ADR |
+| Sales system | Pipeline Engine |
+| Implementation system | Delivery Engine |
+| Product system | Platform Engine |
+| Documentation and review controls | Governance |
+| Structured meaning system | Knowledge Graph |
+
+---
+
+## Boosting rules
+
+Use `boost` only when a page should reliably rank higher for broad terms.
+
+Recommended values:
+
+| Page type | Boost |
+| --- | --- |
+| Quickstart | `2` |
+| Canonical domain overview | `1.5` |
+| Major index page | `1.5` |
+| Templates | `1` |
+| Old or deprecated content | `0.25` to `0.5` |
+
+Avoid large boosts unless there is a clear reason.
+
+---
+
+## Monthly search review
+
+Review:
+
+- common search terms
+- searches that produce poor results
+- searches that reveal missing pages
+- pages that rank too high
+- duplicate pages
+- stale pages
+- unclear titles
+
+---
+
+## Definition of done
+
+Search tuning is working when users can search with natural project terms and land on the correct canonical page.
