@@ -1,0 +1,222 @@
+---
+title: Decision Extraction Guide
+description: How to extract durable business decisions from Founder Log entries.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
+
+owner: thomas
+reviewCycle: monthly
+
+parents:
+  - founder-log/overview
+children: []
+supersedes: []
+supersededBy: []
+
+tags:
+  - founder-log
+  - decisions
+  - extraction
+  - governance
+---
+
+# Decision Extraction Guide
+
+This guide explains how to extract decisions from Founder Log entries.
+
+Raw logs often contain decisions hidden inside reflections, experiments, conversations, and implementation work. Decision extraction makes those choices explicit, reviewable, and traceable.
+
+---
+
+## What counts as a decision?
+
+A decision is a committed choice that affects future action.
+
+Examples:
+
+- choosing a target customer segment
+- changing the offer structure
+- adopting a pricing model
+- rejecting a platform dependency
+- choosing a documentation standard
+- defining an operating rhythm
+- approving a governance rule
+- pausing or abandoning an initiative
+
+Not every thought is a decision. Not every preference is a decision. A decision changes what the business will do.
+
+---
+
+## Decision extraction questions
+
+When reviewing a log entry, ask:
+
+- Did we choose one path over another?
+- Did this change strategy, operations, product, delivery, or governance?
+- Will future work depend on this choice?
+- Would someone need to know this choice to continue correctly?
+- Should the AI Cofounder remember this as a constraint?
+
+If yes, extract the decision.
+
+---
+
+## Decision record format
+
+Use this format when extracting a decision.
+
+```md
+## Decision
+
+[Write the decision in one clear sentence.]
+
+## Context
+
+[What situation led to the decision?]
+
+## Reason
+
+[Why was this decision made?]
+
+## Evidence
+
+[What evidence supported the decision?]
+
+## Alternatives considered
+
+- 
+- 
+- 
+
+## Remaining assumptions
+
+- 
+- 
+- 
+
+## Expected effect
+
+[What should change because of this decision?]
+
+## Revisit trigger
+
+[What would cause this decision to be reviewed again?]
+
+## Destination
+
+Governance / Platform / Pipeline / Delivery / Narrative / Knowledge Graph
+````
+
+---
+
+## Decision status
+
+Use one of these statuses:
+
+| Status     | Meaning                                                     |
+| ---------- | ----------------------------------------------------------- |
+| Proposed   | The decision is suggested but not yet accepted              |
+| Accepted   | The decision is active                                      |
+| Superseded | A newer decision replaced it                                |
+| Rejected   | The decision was considered and not adopted                 |
+| Deprecated | The decision is still known but should no longer guide work |
+| Revisit    | The decision needs review because conditions changed        |
+
+---
+
+## Promotion destinations
+
+Promote decisions based on their type.
+
+| Decision type                     | Destination                     |
+| --------------------------------- | ------------------------------- |
+| Strategic direction               | Governance or Narrative         |
+| Offer or pricing                  | Pipeline                        |
+| Client workflow                   | Delivery                        |
+| Product or automation requirement | Platform                        |
+| Documentation or operating rule   | Governance                      |
+| Conceptual pattern                | Knowledge Graph                 |
+| Architecture or tooling choice    | Platform architecture decisions |
+
+---
+
+## Example
+
+Raw log note:
+
+> Today we kept circling back to the same issue: SMBs do not want “AI transformation” as a vague concept. They want administrative relief, faster follow-up, fewer missed tasks, and less software chaos. We should stop leading with AI novelty and start leading with operational outcomes.
+
+Extracted decision:
+
+```md
+## Decision
+
+Applied Innovation Corp will position its SMB AI implementation offer around operational relief rather than AI novelty.
+
+## Context
+
+Founder Log review showed repeated concern that “AI transformation” is too abstract for SMB buyers.
+
+## Reason
+
+SMB buyers are more likely to understand offers tied to time savings, fewer missed tasks, and simpler operations.
+
+## Evidence
+
+Repeated founder notes, offer refinement work, and expected buyer objections.
+
+## Alternatives considered
+
+- Lead with AI innovation.
+- Lead with technical automation.
+- Lead with cost reduction only.
+
+## Remaining assumptions
+
+- SMBs will respond better to operational language.
+- Operational relief can be translated into clear ROI.
+
+## Expected effect
+
+Sales pages, discovery scripts, and content should emphasize operational outcomes.
+
+## Revisit trigger
+
+Revisit if prospect conversations show stronger response to a different framing.
+
+## Destination
+
+Pipeline / Narrative
+```
+
+---
+
+## Weekly extraction process
+
+During weekly review:
+
+1. Read each daily log.
+2. Highlight every implied choice.
+3. Separate decisions from assumptions.
+4. Extract only decisions that affect future behavior.
+5. Assign a status.
+6. Link to evidence.
+7. Promote to the correct destination.
+8. Add unresolved assumptions to the assumption extraction workflow.
+
+---
+
+## Decision quality checklist
+
+A decision is ready to promote when:
+
+* it is written clearly
+* it has context
+* it has a reason
+* it identifies evidence
+* it names unresolved assumptions
+* it has a destination
+* it has a revisit trigger
+
+A decision without a revisit trigger is harder to govern.

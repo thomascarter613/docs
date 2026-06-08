@@ -1,0 +1,248 @@
+---
+title: Assumption Extraction Guide
+description: How to extract, test, and govern business assumptions from Founder Log entries.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
+
+owner: thomas
+reviewCycle: monthly
+
+parents:
+  - founder-log/overview
+children: []
+supersedes: []
+supersededBy: []
+
+tags:
+  - founder-log
+  - assumptions
+  - extraction
+  - validation
+---
+
+# Assumption Extraction Guide
+
+This guide explains how to extract assumptions from Founder Log entries.
+
+Assumptions are beliefs the business is acting on without complete proof. They are not bad. They are dangerous only when they remain invisible.
+
+The Founder Log should make assumptions visible, testable, and reviewable.
+
+---
+
+## What counts as an assumption?
+
+An assumption is a belief that influences action but still needs evidence.
+
+Examples:
+
+- SMBs will pay for AI implementation if framed around operational relief.
+- A founder-led consulting offer can produce reusable SaaS requirements.
+- Prospects care more about outcomes than tooling.
+- A low-code workflow can be replaced later by a custom platform module.
+- Founder memory can be converted into AI Cofounder context effectively.
+
+---
+
+## Assumption extraction questions
+
+When reading a log entry, ask:
+
+- What are we treating as true?
+- What must be true for this plan to work?
+- What belief is driving this decision?
+- What has not been proven yet?
+- What would make this direction fail?
+- What should the AI Cofounder avoid assuming too strongly?
+
+If the answer affects execution, extract the assumption.
+
+---
+
+## Assumption format
+
+Use this format.
+
+```md
+## Assumption
+
+[Write the assumption as a testable belief.]
+
+## Area
+
+Strategy / Pipeline / Delivery / Platform / Governance / Narrative / Operations
+
+## Why it matters
+
+[Explain what depends on this being true.]
+
+## Current evidence
+
+[What evidence currently supports it?]
+
+## Counterevidence
+
+[What evidence weakens it?]
+
+## Confidence
+
+Low / Medium / High
+
+## Test
+
+[How can this assumption be tested?]
+
+## Decision impact
+
+[What decisions depend on this assumption?]
+
+## Review date
+
+[When should this be checked again?]
+````
+
+---
+
+## Writing good assumptions
+
+Weak assumption:
+
+> People want automation.
+
+Better assumption:
+
+> Local service businesses with repetitive administrative workflows may buy automation services when the offer is tied to measurable time savings.
+
+A good assumption is:
+
+* specific
+* testable
+* tied to a business area
+* connected to decisions
+* assigned a confidence level
+* reviewable
+
+---
+
+## Confidence levels
+
+| Confidence | Meaning                                                                                      |
+| ---------- | -------------------------------------------------------------------------------------------- |
+| Low        | Mostly intuition or weak evidence                                                            |
+| Medium     | Some evidence exists, but more testing is needed                                             |
+| High       | Repeated evidence supports the belief, but it should still be revisited if conditions change |
+
+Do not use high confidence merely because an assumption feels obvious.
+
+---
+
+## Test types
+
+Assumptions can be tested through:
+
+* prospect conversations
+* landing page response
+* sales objections
+* paid pilots
+* delivery outcomes
+* workflow measurements
+* pricing experiments
+* content engagement
+* implementation prototypes
+* manual concierge tests
+
+Choose the smallest useful test.
+
+---
+
+## Example
+
+Raw log note:
+
+> It seems like the consulting work should create the product roadmap. Every client delivery should reveal a reusable module or template.
+
+Extracted assumption:
+
+```md
+## Assumption
+
+Founder-led AI implementation consulting can generate reusable platform requirements for the future SaaS product.
+
+## Area
+
+Platform / Delivery
+
+## Why it matters
+
+The business model depends on consulting producing both revenue and product intelligence.
+
+## Current evidence
+
+The planned delivery model is designed to extract reusable workflows, templates, and implementation patterns.
+
+## Counterevidence
+
+No completed client engagements have proven this loop yet.
+
+## Confidence
+
+Medium
+
+## Test
+
+After each client engagement, identify whether at least one reusable asset, template, or product requirement was created.
+
+## Decision impact
+
+This assumption supports the SaaS-plus-consulting model.
+
+## Review date
+
+Monthly review after the first three engagements.
+```
+
+---
+
+## Assumption lifecycle
+
+Assumptions move through these states:
+
+1. **Identified** — the assumption has been noticed.
+2. **Defined** — the assumption is written clearly.
+3. **Testable** — a test has been assigned.
+4. **Testing** — evidence is being gathered.
+5. **Confirmed** — evidence supports the assumption.
+6. **Weakened** — evidence is mixed or negative.
+7. **Rejected** — the assumption should no longer guide action.
+8. **Converted** — the assumption became a decision, rule, or doctrine.
+
+---
+
+## Weekly review process
+
+During weekly review:
+
+1. Scan daily logs for implied beliefs.
+2. Extract assumptions that affect decisions.
+3. Assign confidence levels.
+4. Connect assumptions to decisions.
+5. Define tests.
+6. Mark assumptions that need monthly review.
+7. Promote confirmed assumptions into doctrine only after repeated evidence.
+
+---
+
+## Assumption quality checklist
+
+An assumption is ready to track when:
+
+* it is written as a testable belief
+* it identifies what depends on it
+* it has evidence and counterevidence
+* it has a confidence level
+* it has a test
+* it has a review date
+* it is connected to a business area
+
+Invisible assumptions create hidden risk. Visible assumptions create learning.

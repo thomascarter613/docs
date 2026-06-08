@@ -1,0 +1,207 @@
+---
+title: Redaction Rules
+description: Rules for protecting sensitive information before Founder Log entries are reused, shared, promoted, or processed by AI.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
+
+owner: thomas
+reviewCycle: monthly
+
+parents:
+  - founder-log/overview
+children: []
+supersedes: []
+supersededBy: []
+
+tags:
+  - founder-log
+  - redaction
+  - privacy
+  - governance
+  - ai-safety
+---
+
+# Redaction Rules
+
+Founder Log entries may contain raw context from strategy, sales, client work, personal founder reflection, platform planning, and AI-assisted execution.
+
+Before that context is reused, published, promoted, or given to AI, it must be reviewed for sensitive information.
+
+The purpose of redaction is to preserve the business lesson while removing unnecessary exposure.
+
+---
+
+## Core rule
+
+Capture the insight. Protect the sensitive details.
+
+A Founder Log entry should preserve what the business learned without exposing information that does not need to be reused.
+
+---
+
+## Information that must be removed or masked
+
+Redact the following before reuse:
+
+- passwords
+- API keys
+- access tokens
+- private keys
+- seed phrases
+- account numbers
+- Social Security numbers
+- private financial details
+- client confidential information
+- private client names when not needed
+- personal addresses
+- personal phone numbers
+- private legal information
+- medical information
+- sensitive family information
+- unapproved pricing details
+- unapproved contract terms
+- private emails
+- internal-only security details
+
+---
+
+## Information that may need partial redaction
+
+Some information can be generalized instead of removed.
+
+| Raw detail | Safer replacement |
+| --- | --- |
+| Client company name | A local service business |
+| Exact price | A mid-four-figure implementation fee |
+| Personal name | The decision maker |
+| Specific location | A regional market |
+| Private business issue | An operational constraint |
+| Exact revenue | Current revenue range |
+| Exact workflow | A repetitive administrative workflow |
+
+---
+
+## Safe transformation examples
+
+Unsafe:
+
+> Smith Family Dental said their front desk misses 14 follow-up calls per week and cannot afford the $4,500 proposal this month.
+
+Safer:
+
+> A local healthcare-adjacent service business showed interest in follow-up automation but raised timing and budget concerns around a mid-four-figure implementation.
+
+Unsafe:
+
+> The client gave us access to their Gmail and CRM credentials.
+
+Safer:
+
+> The implementation requires a secure credential intake process before any client system access is accepted.
+
+Unsafe:
+
+> I think this prospect is disorganized and probably does not understand AI.
+
+Safer:
+
+> The prospect may need clearer operational framing and a simpler explanation of the implementation process.
+
+---
+
+## AI reuse rules
+
+Before giving Founder Log content to AI:
+
+1. Remove secrets and credentials.
+2. Remove unnecessary personal identifiers.
+3. Generalize client details unless identity is required.
+4. Mark unverified claims as unverified.
+5. Separate facts from interpretations.
+6. Remove private emotional content that does not affect business operations.
+7. Include only the context needed for the task.
+8. Tell the AI what not to assume.
+
+AI should receive the minimum useful context.
+
+---
+
+## Public reuse rules
+
+Before turning Founder Log content into public material:
+
+- remove private names unless permission exists
+- remove confidential client details
+- remove unsupported claims
+- remove exact numbers unless verified and approved
+- remove anything that could embarrass, expose, or misrepresent a person or client
+- convert raw frustration into professional insight
+- preserve the lesson, not the private situation
+
+---
+
+## Client-facing reuse rules
+
+Before turning Founder Log content into client-facing material:
+
+- remove references to other clients
+- remove internal doubts or unresolved assumptions
+- remove private founder notes
+- verify all claims
+- confirm pricing, scope, and commitments
+- make the language professional and specific
+- avoid promising outcomes not yet proven
+
+---
+
+## Governance reuse rules
+
+Before promoting a Founder Log entry into Governance:
+
+- keep the decision context
+- keep the evidence
+- keep the risk
+- remove unnecessary personal detail
+- identify whether the item is a rule, standard, decision, risk, or operating doctrine
+- assign review cadence
+
+Governance needs enough context to explain the rule, but not every raw detail that produced it.
+
+---
+
+## Redaction labels
+
+Use these labels when editing entries.
+
+| Label | Meaning |
+| --- | --- |
+| `[REDACTED_SECRET]` | Secret, credential, token, or key removed |
+| `[REDACTED_CLIENT]` | Client identity removed |
+| `[REDACTED_PERSON]` | Personal identity removed |
+| `[GENERALIZED]` | Specific details replaced with a safer category |
+| `[UNVERIFIED]` | Claim requires confirmation |
+| `[INTERNAL_ONLY]` | Safe internally, not for public reuse |
+
+---
+
+## Redaction checklist
+
+Before reuse, ask:
+
+- Does this contain secrets?
+- Does this identify a client unnecessarily?
+- Does this expose private personal information?
+- Does this include unverified claims?
+- Does this include emotional wording that should be reframed?
+- Does the AI need this detail to complete the task?
+- Could this create legal, reputational, or client trust risk?
+- Can the lesson be preserved with less exposure?
+
+---
+
+## Rule of thumb
+
+When the lesson can survive without the private detail, remove the private detail.
+
+The Founder Log should make the company smarter without making it less safe.

@@ -13,7 +13,11 @@
     "groups": [
       {
         "group": "Founder Log",
-        "pages": ["founder-log/overview"]
+        "pages": [
+          "founder-log/overview",
+          "founder-log/ai-cofounder/handoff",
+          "founder-log/standards/logging-standard"
+        ]
       },
       {
         "group": "Daily Logs",
@@ -24,13 +28,33 @@
       },
       {
         "group": "Weekly Reviews",
-        "pages": ["founder-log/weekly/overview"]
+        "pages": [
+          "founder-log/weekly/overview",
+          "founder-log/weekly/template"
+        ]
       },
       {
         "group": "Monthly Themes",
-        "pages": ["founder-log/monthly/overview"]
+        "pages": [
+          "founder-log/monthly/overview",
+          "founder-log/monthly/template"
+        ]
       },
-
+      {
+        "group": "Founder Log Extraction",
+        "pages": [
+          "founder-log/extraction/decisions",
+          "founder-log/extraction/assumptions",
+          "founder-log/extraction/risks"
+        ]
+      },
+      {
+        "group": "Founder Log Governance",
+        "pages": [
+          "founder-log/governance/redaction",
+          "founder-log/workflows/promotion"
+        ]
+      },
       {
         "group": "Narrative Engine",
         "pages": [
@@ -214,7 +238,7 @@
     },
     "links": [
       {
-        "label": "v{{version}}",
+        "label": "Versions",
         "href": "/versions"
       },
       {
@@ -236,7 +260,7 @@
       {
         "label": "GitHub",
         "type": "github",
-        "href": "https://github.com/your-org/monad"
+        "href": "https://github.com/thomascarter613/monad-workspace"
       }
     ],
     "primary": {
@@ -261,9 +285,9 @@
 
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/monad-workspace",
+      "github": "https://github.com/thomascarter613/monad-workspace",
+      "linkedin": "https://linkedin.com/company/monad-workspace"
     }
   }
 }

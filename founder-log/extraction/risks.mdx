@@ -1,0 +1,243 @@
+---
+title: Risk Extraction Guide
+description: How to extract risks, blockers, constraints, and weak signals from Founder Log entries.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
+
+owner: thomas
+reviewCycle: monthly
+
+parents:
+  - founder-log/overview
+children: []
+supersedes: []
+supersededBy: []
+
+tags:
+  - founder-log
+  - risks
+  - extraction
+  - governance
+---
+
+# Risk Extraction Guide
+
+This guide explains how to extract risks from Founder Log entries.
+
+Risks often appear first as friction, hesitation, delay, confusion, repeated rework, or vague concern. The purpose of risk extraction is to notice those signals early and convert them into visible operating awareness.
+
+---
+
+## What counts as a risk?
+
+A risk is anything that could negatively affect the business, platform, clients, founder capacity, credibility, delivery quality, financial stability, or execution momentum.
+
+Examples:
+
+- offer is too vague for buyers
+- founder is overbuilding before validation
+- delivery process is not repeatable
+- AI output is being trusted without verification
+- technical scope is expanding too quickly
+- client data may be mishandled
+- documentation is becoming stale
+- sales learning is not being captured
+- platform requirements are detached from real demand
+
+---
+
+## Risk extraction questions
+
+When reviewing a log entry, ask:
+
+- What could go wrong?
+- What is slowing progress?
+- What keeps repeating?
+- What feels unclear?
+- What is being avoided?
+- What would make this plan fail?
+- What could damage trust?
+- What requires human verification?
+- What is the AI Cofounder likely to misunderstand?
+
+If the issue could affect outcomes, extract it as a risk.
+
+---
+
+## Risk format
+
+Use this format.
+
+```md
+## Risk
+
+[Write the risk clearly.]
+
+## Area
+
+Strategy / Pipeline / Delivery / Platform / Governance / Narrative / Operations / Finance / Legal
+
+## Source
+
+[Where did this risk appear?]
+
+## Impact
+
+Low / Medium / High / Critical
+
+## Likelihood
+
+Low / Medium / High
+
+## Signal
+
+[What evidence suggests the risk exists?]
+
+## Response
+
+Avoid / Reduce / Transfer / Accept / Monitor
+
+## Next action
+
+[What should be done next?]
+
+## Review date
+
+[When should this be reviewed again?]
+````
+
+---
+
+## Severity levels
+
+| Severity | Meaning                                                                             |
+| -------- | ----------------------------------------------------------------------------------- |
+| Low      | Annoying but unlikely to materially affect the business                             |
+| Medium   | Could slow execution or create rework                                               |
+| High     | Could affect revenue, trust, delivery, or strategic direction                       |
+| Critical | Could threaten legal safety, financial survival, client trust, or company viability |
+
+---
+
+## Risk response types
+
+| Response | Meaning                                                                |
+| -------- | ---------------------------------------------------------------------- |
+| Avoid    | Stop doing the risky activity                                          |
+| Reduce   | Add controls or process to lower the risk                              |
+| Transfer | Shift risk through contract, insurance, vendor, or external specialist |
+| Accept   | Acknowledge and proceed because the risk is tolerable                  |
+| Monitor  | Watch for changes before acting                                        |
+
+---
+
+## Example
+
+Raw log note:
+
+> We keep adding more platform ideas before proving the consulting offer. The roadmap is becoming exciting but could become a distraction.
+
+Extracted risk:
+
+```md
+## Risk
+
+The platform roadmap may expand faster than the consulting business is validated.
+
+## Area
+
+Platform / Strategy
+
+## Source
+
+Repeated Founder Log notes about adding modules, governance systems, and automation before client validation.
+
+## Impact
+
+High
+
+## Likelihood
+
+Medium
+
+## Signal
+
+Increasing number of product ideas without corresponding prospect or client evidence.
+
+## Response
+
+Reduce
+
+## Next action
+
+Require each major platform requirement to trace back to founder workflow, client delivery, or validated market signal.
+
+## Review date
+
+Next monthly review.
+```
+
+---
+
+## Weak signals
+
+Weak signals are early indicators that may become risks.
+
+Examples:
+
+* recurring confusion
+* repeated delays
+* vague discomfort
+* frequent rework
+* unclear next steps
+* inconsistent terminology
+* AI output that sounds plausible but lacks evidence
+* tasks that keep being postponed
+
+Weak signals should be logged even before they become formal risks.
+
+---
+
+## Risk lifecycle
+
+Risks move through these states:
+
+1. **Signal noticed**
+2. **Risk extracted**
+3. **Severity assigned**
+4. **Response chosen**
+5. **Action taken**
+6. **Reviewed**
+7. **Resolved, accepted, or escalated**
+
+---
+
+## Weekly review process
+
+During weekly review:
+
+1. Scan daily logs for friction and repeated blockers.
+2. Extract risks that could affect execution.
+3. Assign severity and likelihood.
+4. Decide whether to reduce, accept, monitor, avoid, or transfer.
+5. Add next actions.
+6. Escalate serious risks to Governance.
+7. Revisit unresolved risks during monthly review.
+
+---
+
+## Risk quality checklist
+
+A risk is ready to track when:
+
+* it is written clearly
+* it names the affected area
+* it has a source
+* it has severity and likelihood
+* it identifies a signal
+* it has a response type
+* it has a next action
+* it has a review date
+
+A risk that is not reviewed becomes background anxiety. A reviewed risk becomes operating intelligence.
