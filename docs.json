@@ -20,6 +20,25 @@
         ]
       },
       {
+        "group": "Architecture Decision Records",
+        "pages": [
+          "adr/index",
+          "adr/template",
+          "adr/process",
+          "adr/status-model",
+          "adr/supersession",
+          "adr/review-checklist",
+          "adr/0001-use-rust-for-monad-runtime",
+          "adr/0002-coordinate-native-tools",
+          "adr/0003-use-multi-crate-rust-workspace",
+          "adr/0004-use-latest-stable-rust",
+          "adr/0005-introduce-tokio-immediately",
+          "adr/0006-use-monad-toml-as-canonical-manifest",
+          "adr/0007-maintain-monad-lock-and-monad-state",
+          "adr/0008-support-multiple-graph-output-formats"
+        ]
+      },
+      {
         "group": "Daily Logs",
         "pages": [
           "founder-log/daily/2026-06-05",

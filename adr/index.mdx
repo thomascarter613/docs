@@ -1,14 +1,23 @@
 ---
 title: ADR Index
-version: 0.1.0
-status: active
-updated: 2026-06-05
+description: Canonical index of all Architecture Decision Records for Monad-Workspace.
+version: 1.0.0
+status: stable
+updated: 2026-06-08
 
 owner: thomas
-reviewCycle: quarterly
+reviewCycle: monthly
 
 parents: []
-children: []
+children:
+  - adr/0001-use-rust-for-monad-runtime
+  - adr/0002-coordinate-native-tools
+  - adr/0003-use-multi-crate-rust-workspace
+  - adr/0004-use-latest-stable-rust
+  - adr/0005-introduce-tokio-immediately
+  - adr/0006-use-monad-toml-as-canonical-manifest
+  - adr/0007-maintain-monad-lock-and-monad-state
+  - adr/0008-support-multiple-graph-output-formats
 supersedes: []
 supersededBy: []
 
@@ -16,11 +25,249 @@ tags:
   - adr
   - index
   - monad
+  - monad-workspace
+  - architecture
+  - governance
+  - decision-records
 ---
 
 # ADR Index
 
-This is the canonical index of all Architecture Decision Records (ADRs) in Monad.
+This is the canonical index of all Architecture Decision Records (ADRs) in Monad-Workspace.
 
-## ADRs
+Architecture Decision Records preserve the important technical, architectural, operational, and governance decisions that shape Monad-Workspace over time. Each ADR explains what was decided, why the decision was made, what alternatives were considered, and what consequences follow from the decision.
 
+The ADR index is the primary entry point for understanding the architectural lineage of the project.
+
+---
+
+## Purpose
+
+Monad-Workspace is intended to be a local-first, AI-ready, governance-grade, polyglot repo runtime and operating system for modern software work.
+
+Because the project combines runtime architecture, developer experience, native tool coordination, AI context, policy, provenance, graph modeling, and documentation governance, decisions must not remain scattered across chats, commits, issues, or temporary notes.
+
+The ADR system exists to make those decisions:
+
+- explicit
+- traceable
+- reviewable
+- supersedable
+- reusable
+- understandable to future contributors
+- usable by AI-assisted development workflows
+
+An ADR is not merely a note about what was chosen. It is a durable record of why the project moved in a specific direction.
+
+---
+
+## ADR status model
+
+Each ADR should use one of the following statuses.
+
+| Status | Meaning |
+| --- | --- |
+| Proposed | The decision is being considered but is not yet binding. |
+| Accepted | The decision is active and should guide implementation. |
+| Superseded | A newer ADR has replaced this decision. |
+| Deprecated | The decision is still historically relevant but should no longer guide new work. |
+| Rejected | The option was considered and intentionally not adopted. |
+| Draft | The ADR exists but is incomplete or not yet ready for review. |
+
+Accepted ADRs are binding until they are superseded, deprecated, or explicitly revised by a later ADR.
+
+---
+
+## Canonical ADR table
+
+| ADR | Title | Status | Date | Area | Summary |
+| --- | --- | --- | --- | --- | --- |
+| [ADR-0001](./0001-use-rust-for-monad-runtime) | Use Rust for Monad Runtime | Accepted | 2026-05-20 | Runtime | Monad will be implemented primarily in Rust as a fast, local-first, single-binary polyglot repo runtime. |
+| [ADR-0002](./0002-coordinate-native-tools) | Coordinate Native Tools Rather Than Replace Them | Accepted | 2026-05-20 | Tooling Strategy | Monad will coordinate ecosystem-native tools instead of reimplementing every language tool internally. |
+| [ADR-0003](./0003-use-multi-crate-rust-workspace) | Use a Multi-Crate Rust Workspace | Accepted | 2026-05-20 | Repository Architecture | Monad will use a multi-crate Rust workspace with clear crate boundaries and dependency direction. |
+| [ADR-0004](./0004-use-latest-stable-rust) | Use Latest Stable Rust as MSRV Policy | Accepted | 2026-05-20 | Runtime Policy | Monad will target the latest stable Rust toolchain during early development and revisit fixed MSRV before v1.0. |
+| [ADR-0005](./0005-introduce-tokio-immediately) | Introduce Tokio Immediately | Accepted | 2026-05-20 | Async Runtime | Monad will introduce Tokio early so async execution, process orchestration, and future concurrency are built on a stable foundation. |
+| [ADR-0006](./0006-use-monad-toml-as-canonical-manifest) | Use `monad.toml` as the Canonical Manifest | Accepted | 2026-05-20 | Workspace Configuration | Monad will use `monad.toml` as its canonical workspace manifest for project intent, configuration, and tool coordination. |
+| [ADR-0007](./0007-maintain-monad-lock-and-monad-state) | Maintain `monad.lock` and `.monad/` State | Accepted | 2026-05-20 | State and Reproducibility | Monad will separate declared intent, resolved state, and operational state using `monad.toml`, `monad.lock`, and `.monad/`. |
+| [ADR-0008](./0008-support-multiple-graph-output-formats) | Support Multiple Graph Output Formats | Accepted | 2026-05-20 | Graph System | Monad graph output will support human-readable text, JSON, Mermaid, and DOT, with graph construction separated from rendering. |
+
+---
+
+## ADR numbering rules
+
+ADR numbers are permanent.
+
+Once assigned, an ADR number should not be reused, even if the ADR is rejected, superseded, or deprecated.
+
+Use this format:
+
+```txt
+ADR-0001
+ADR-0002
+ADR-0003
+````
+
+File names should use lowercase kebab-case:
+
+```txt
+0001-use-rust-for-monad-runtime.mdx
+0002-coordinate-native-tools.mdx
+0003-use-multi-crate-rust-workspace.mdx
+```
+
+The ADR number identifies the decision. The title explains the decision.
+
+---
+
+## ADR lifecycle
+
+ADRs move through the following lifecycle:
+
+1. **Draft** — the ADR is being written.
+2. **Proposed** — the ADR is ready for review.
+3. **Accepted** — the ADR is active and binding.
+4. **Superseded** — the ADR has been replaced by a later ADR.
+5. **Deprecated** — the ADR is no longer recommended but remains historically useful.
+6. **Rejected** — the proposed decision was considered and declined.
+
+An ADR should not be deleted merely because the decision changed. The decision history is part of the project history.
+
+---
+
+## When to create an ADR
+
+Create an ADR when a decision affects:
+
+* runtime architecture
+* workspace structure
+* manifest or configuration design
+* CLI behavior
+* graph model or output format
+* toolchain coordination
+* state, cache, lockfile, or provenance behavior
+* AI context or memory architecture
+* policy, governance, or verification model
+* major dependency choices
+* developer experience principles
+* compatibility or migration strategy
+
+Do not create an ADR for every small implementation detail. Use ADRs for decisions that future contributors or AI agents would need to understand before changing the system.
+
+---
+
+## What every ADR should include
+
+Each ADR should include:
+
+* title
+* status
+* date
+* context
+* decision
+* alternatives considered
+* consequences
+* implementation notes
+* supersession information
+* related documents
+
+A good ADR explains both the chosen path and the rejected paths.
+
+---
+
+## Relationship to other docs
+
+The ADR system connects to several other documentation areas.
+
+| Area                  | Relationship                                                                                     |
+| --------------------- | ------------------------------------------------------------------------------------------------ |
+| Platform Architecture | ADRs explain why the architecture is shaped the way it is.                                       |
+| Governance            | ADRs provide durable decision lineage and review discipline.                                     |
+| Knowledge Graph       | ADRs become decision nodes that can be linked to concepts, modules, and consequences.            |
+| Founder Log           | Founder Log entries may produce decisions that later become ADRs.                                |
+| Changelog             | Changelog entries may reference ADRs when implementation changes follow architectural decisions. |
+| Roadmap               | Roadmap priorities may depend on accepted ADRs.                                                  |
+
+The ADR index is the decision map. Individual ADRs are the decision records.
+
+---
+
+## Review cadence
+
+Review the ADR index monthly.
+
+During review:
+
+* confirm that accepted ADRs still reflect current architecture
+* identify decisions that need new ADRs
+* mark superseded ADRs clearly
+* update links to implementation work
+* confirm that the ADR table is complete
+* check that new architectural decisions were not left only in chat, issues, or commits
+
+The ADR system should stay current enough to guide real implementation.
+
+---
+
+## Maintenance rules
+
+1. Every ADR must have a permanent number.
+2. Every ADR must have a clear status.
+3. Accepted ADRs are binding until superseded.
+4. Superseded ADRs must link to the replacing ADR.
+5. New ADRs should be added to this index immediately.
+6. File names should remain stable.
+7. ADRs should preserve context, not just conclusions.
+8. AI-generated ADR drafts require human review before acceptance.
+9. ADRs should be concise but complete.
+10. Never delete architectural history merely because the project changed direction.
+
+---
+
+## Current ADR coverage
+
+The current accepted ADR set establishes the foundation for Monad-Workspace:
+
+* Rust-first runtime
+* native tool coordination
+* multi-crate workspace organization
+* latest stable Rust policy
+* early Tokio adoption
+* canonical `monad.toml` manifest
+* `monad.lock` and `.monad/` state separation
+* multi-format graph output
+
+Together, these ADRs define the first architectural baseline for Monad-Workspace.
+
+Future ADRs should build on this baseline rather than re-litigating it without clear new evidence.
+
+---
+
+## Definition of done
+
+The ADR system is working when:
+
+* architectural choices are easy to trace
+* future contributors can understand why the system exists as it does
+* AI-assisted development can ground recommendations in accepted decisions
+* implementation work can reference durable decision records
+* superseded decisions remain historically visible
+* major technical changes do not happen without recorded rationale
+
+The ADR index is the canonical map of Monad-Workspace architecture decisions.
+
+
+## ADR Subpages
+
+[ADR Template](templates/core-adr) Canonical template for all future ADRs. You already have a placeholder template under `platform/architecture/adr-template`; I recommend moving or duplicating the canonical one under `adr/template`.
+[ADR Process](adr/process) Defines when to create, review, accept, supersede, or reject ADRs.
+[ADR Status Model](adr/status-model) Documents statuses: Draft, Proposed, Accepted, Superseded, Deprecated, Rejected.
+[ADR Supersession Guide](adr/supersession) Explains how to replace old decisions without deleting history.
+[ADR Review Checklist](adr/review-checklist) Provides a checklist for reviewing ADR quality before acceptance.
+[ADR-0001](adr/0001-use-rust-for-monad-runtime) Individual ADR page for the Rust runtime decision.
+[ADR-0002](adr/0002-coordinate-native-tools) Individual ADR page for native tool coordination.
+[ADR-0003](adr/0003-use-multi-crate-rust-workspace) Individual ADR page for crate/workspace structure.
+[ADR-0004](adr/0004-use-latest-stable-rust) Individual ADR page for Rust toolchain policy.
+[ADR-0005](adr/0005-introduce-tokio-immediately) Individual ADR page for async runtime foundation.
+[ADR-0006](adr/0006-use-monad-toml-as-canonical-manifest) Individual ADR page for `monad.toml`.
+[ADR-0007](adr/0007-maintain-monad-lock-and-monad-state) Individual ADR page for `monad.lock` and `.monad/`.
+[ADR-0008](adr/0008-support-multiple-graph-output-formats) Individual ADR page for graph output formats.
